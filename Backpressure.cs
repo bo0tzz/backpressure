@@ -7,12 +7,9 @@ namespace Backpressure
     [BepInDependency("BerryLoader")]
     class Plugin : BaseUnityPlugin
     {
-        public static BepInEx.Logging.ManualLogSource L;
-
         private void Awake()
         {
-            L = Logger;
-            L.LogInfo("hello from Backpressure.Plugin.Awake");
+            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
         }
     }
 }
